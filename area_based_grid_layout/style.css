@@ -4,3 +4,42 @@ body {
   margin: 0;
   font-family: 'Source Sans Pro', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
 }
+
+/* サイト名 */
+.site {
+  background-color: #444;
+  padding: 10px;
+  text-align: center;
+}
+
+.site a {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Paytone One', sans-serif;
+  text-decoration: none;
+}
+
+/* ナビゲーションメニュー */
+.menu {
+  padding: 40px 0;
+  background-color: #f0f0e9;
+}
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li a {
+  display: block;
+  margin-bottom: 15px;
+  padding: 15px;
+  background-color: #700;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #622;
+}
