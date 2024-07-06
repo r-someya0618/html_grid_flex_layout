@@ -158,4 +158,27 @@ body {
     grid-template-areas: 'head' 'side1' 'main' 'side2' 'foot';
     grid-template-columns: 1fr;
   }
+  /* ナビゲーションメニュー */
+  .menu {
+    padding: 0;
+  }
+  .menu ul {
+    display: flex;
+  }
+  .menu li {
+    flex: 1;
+  }
+  .menu li:not(:first-child) {
+    border-left: solid 1px #fff;
+  }
+  .menu li a {
+    margin-bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    text-align: center;
+  }
+  /* 記事 */
+  .kiji {
+    padding: 40px 20px;
+  }
 }
