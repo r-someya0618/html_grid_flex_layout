@@ -153,3 +153,36 @@ body {
   color: #666;
   font-size: 14px;
 }
+
+/* グリッド */
+body {
+  display: grid;
+  grid-template-columns: 1fr 700px 50px 300px 1fr;
+  grid-template-rows: auto auto 40px auto 30px auto;
+}
+
+.kiji {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.site {
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.menu {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+}
+
+.side {
+  grid-column-start: 4;
+  grid-row-start: 4;
+}
+.copyright {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: -2;
+}
