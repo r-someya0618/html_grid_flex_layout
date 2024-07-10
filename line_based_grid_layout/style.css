@@ -142,6 +142,10 @@ body {
   color: #666;
   font-size: 18px;
 }
+.side img {
+  max-width: 100%;
+  height: auto;
+}
 
 /* コピーライト */
 .copyright {
@@ -185,4 +189,23 @@ body {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: -2;
+}
+
+/* 1089px以下 */
+@media (max-width: 1089px) {
+  body {
+    grid-template-columns: 20px 7fr 30px 3fr 20px;
+  }
+}
+
+/* 767px以下 */
+@media (max-width: 767px) {
+  body {
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: auto auto 40px auto 30px auto 30px auto;
+  }
+  .side {
+    grid-column-start: 2;
+    grid-row-start: 6;
+  }
 }
