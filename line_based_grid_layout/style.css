@@ -179,6 +179,12 @@ body {
   grid-column-start: 1;
   grid-column-end: -1;
   grid-row-start: 2;
+  display: grid;
+  grid-template-columns: inherit;
+}
+.menu ul {
+  grid-column-start: 2;
+  grid-column-end: -2;
 }
 
 .side {
