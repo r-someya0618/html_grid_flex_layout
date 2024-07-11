@@ -227,3 +227,26 @@ body {
     font-size: 10px;
   }
 }
+
+/* 500px 〜 767px */
+@media (min-width: 500px) and (max-width: 767px) {
+  .side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-column-gap: 30px;
+  }
+  .osusume {
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .special {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .ninki {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+  }
+}
