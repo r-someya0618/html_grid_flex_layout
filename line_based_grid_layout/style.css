@@ -56,9 +56,25 @@ body {
 }
 
 .kiji h2 {
+  display: flex;
+  align-items: baseline;
   margin-top: 40px;
   border-bottom: dotted 1px #7cbac1;
   font-weight: normal;
+}
+
+.kiji h2 span {
+  margin-right: 10px;
+  color: #7cbac1;
+}
+
+.kiji h2 .box {
+  align-self: flex-end;
+  margin-left: auto;
+  margin-right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #7cabc1;
 }
 
 .kiji p {
@@ -103,7 +119,9 @@ body {
 }
 .osusume li a {
   display: block;
-  padding: 5px;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 0;
   color: #000;
   font-size: 14px;
   text-decoration: none;
@@ -111,6 +129,25 @@ body {
 
 .osusume li a:hover {
   background-color: #eee;
+}
+
+.osusume img {
+  width: 100%;
+  vertical-align: bottom;
+}
+
+.osusume span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
 }
 /* 人気の記事メニュー */
 .ninki ul {
