@@ -21,6 +21,26 @@ body {
   vertical-align: bottom;
 }
 
+/* ナビゲーションメニュー */
+.menu ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.menu li a {
+  display: block;
+  padding: 15px;
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  background-color: #eee;
+}
+
 /* ヘッダー画像 */
 .headimg {
   width: 100%;
@@ -92,6 +112,13 @@ body {
 .site {
   grid-column-start: main;
   grid-row-start: head;
+}
+
+.menu {
+  grid-column-start: main;
+  grid-row-start: head;
+  justify-self: end;
+  align-self: center;
 }
 
 .headimg {
