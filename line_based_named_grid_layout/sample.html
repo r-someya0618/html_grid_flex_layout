@@ -18,6 +18,16 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function openMenu() {
+        const menu = document.querySelector('.menu')
+        if (menu.style.maxHeight) {
+          menu.style.maxHeight = null
+        }else {
+          menu.style.maxHeight = menu.scrollHeight + "px"
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="site">
@@ -25,6 +35,11 @@
         ><img src="img/logo-large.png" alt="TimeSwitch" width="250" height="33"
       /></a>
     </div>
+
+    <button type="button" onclick="openMenu()">
+      <span class="fa fa-bars"></span>
+      <span class="sr-only">MENU</span>
+    </button>
 
     <nav class="menu">
       <ul>

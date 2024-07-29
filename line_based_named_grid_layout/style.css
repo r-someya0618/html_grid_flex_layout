@@ -21,6 +21,21 @@ body {
   vertical-align: bottom;
 }
 
+/* トグルボタン */
+button {
+  display: none;
+  padding: 6px;
+  border: none;
+  background-color: transparent;
+  color: #888;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 /* ナビゲーションメニュー */
 .menu ul {
   display: flex;
@@ -106,12 +121,19 @@ body {
   grid-template-columns:
     [left] minmax(20px, 1fr) [main] minmax(auto, 1140px) [main-end] minmax(20px, 1fr)
     [right];
-  grid-template-rows: [head] auto [img] auto [catch] auto [main] auto [foot] auto [bottom];
+  grid-template-rows: [head] auto [head] auto [img] auto [catch] auto [main] auto [foot] auto [bottom];
 }
 
 .site {
   grid-column-start: main;
   grid-row-start: head;
+}
+
+button {
+  grid-column-start: main;
+  grid-row-start: head;
+  justify-self: end;
+  align-self: center;
 }
 
 .menu {
@@ -146,6 +168,25 @@ body {
   .headimg {
     grid-column-start: left;
     grid-column-end: right;
+  }
+}
+
+/* 767px以下 */
+@media (max-width: 767px) {
+  button {
+    display: block;
+  }
+
+  .menu {
+    grid-row-start: head 2;
+    justify-self: stretch;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+  }
+
+  .menu ul {
+    flex-direction: column;
   }
 }
 
