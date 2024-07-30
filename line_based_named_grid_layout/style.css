@@ -263,10 +263,31 @@ button {
 .copyright {
   grid-column-start: main;
   grid-row-start: foot;
+  margin: 15px 0;
+}
+
+.fbar {
+  grid-column-start: left;
+  grid-column-end: right;
+  grid-row-start: foot;
+  background-color: #ddd;
+  z-index: -1;
 }
 
 /* 1280px 以上*/
 @media (min-width: 1280px) {
+  .hbar {
+    grid-column-start: left;
+    grid-column-end: right;
+    grid-row-start: head;
+    z-index: -1;
+    border-bottom: solid 4px #ddd;
+  }
+
+  .headimg {
+    margin-top: 20px;
+  }
+
   .sns {
     grid-column-start: left;
     grid-row-start: img;
