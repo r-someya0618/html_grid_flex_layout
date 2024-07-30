@@ -76,6 +76,49 @@ button:focus {
   margin-bottom: 40px;
 }
 
+/* 概要 */
+.pickup {
+  margin-bottom: 20px;
+}
+
+.gaiyou a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+}
+
+.gaiyou span {
+  display: block;
+  padding: 36px 0;
+  font-size: 38px;
+}
+
+.gaiyou .fa-database {
+  background-color: #bfbd13;
+}
+.gaiyou .fa-bar-chart-o {
+  background-color: #c58839;
+}
+.gaiyou .fa-envelope {
+  background-color: #859f46;
+}
+
+.gaiyou h2 {
+  margin: 0;
+  padding: 5px 0;
+  background-color: #222;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.gaiyou p {
+  margin: 0;
+  padding: 15px 0;
+  background-color: #524e3c;
+  font-size: 12px;
+}
+
 /* お知らせ */
 .news {
   margin-bottom: 20px;
@@ -161,7 +204,7 @@ body {
   grid-template-columns:
     [left] minmax(20px, 1fr) [main] minmax(auto, 1140px) [main-end] minmax(20px, 1fr)
     [right];
-  grid-template-rows: [head] auto [head] auto [img] auto [catch] auto [main] auto [sns] auto [foot] auto [bottom];
+  grid-template-rows: [head] auto [head] auto [img] auto [catch] auto [pickup]auto [main] auto [sns] auto [foot] auto [bottom];
 }
 
 .site {
@@ -191,6 +234,15 @@ button {
 .catch {
   grid-column-start: main;
   grid-row-start: img;
+}
+
+.pickup {
+  grid-column-start: main;
+  grid-row-start: pickup;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-column-gap: 20px;
 }
 
 .news {
