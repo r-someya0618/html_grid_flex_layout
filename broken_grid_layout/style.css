@@ -77,6 +77,102 @@ figcaption strong {
   display: block;
 }
 
+/* メニュー */
+.menu {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  z-index: 100;
+  width: 280px;
+  margin-left: -280px;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: margin-left 0.2s ease-out;
+}
+
+body.open .menu {
+  margin-left: 0;
+}
+
+.menu ul {
+  margin: 0;
+  margin-top: 60px;
+  padding: 0;
+  list-style: none;
+  height: calc(100vh - 60px);
+  overflow: auto;
+}
+
+.menu li a {
+  display: block;
+  padding: 20px;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none;
+}
+.menu li a:hover {
+  background-color: #222;
+}
+
+body.open .page-cover {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+body.open {
+  height: 100vh;
+  overflow: hidden;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+/* メニュー開閉ボタン */
+button {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  justify-self: start;
+  align-self: center;
+  padding: 14px;
+  border: none;
+  background-color: transparent;
+  color: #888;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+body.open button {
+  z-index: 200;
+  color: #fff;
+}
+
+body:not(.open) .fa-close {
+  display: none;
+}
+
+body.open .fa-bars {
+  display: none;
+}
+
+/* 赤色のバー */
+.redbar {
+  grid-column-start: 1;
+  grid-row-start: 2;
+  grid-row-end: -2;
+  width: 25px;
+  background-color: #930000;
+}
+
 /* グリッド */
 body {
   display: grid;
@@ -188,5 +284,17 @@ body {
     .fig1 figcaption {
       width: 11em;
     }
+  }
+}
+
+/* 1023px以下 */
+@media (max-width: 1023px) {
+  .redbar {
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: auto;
+    height: 10px;
   }
 }

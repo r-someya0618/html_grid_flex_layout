@@ -24,19 +24,44 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script>
+      function toggleMenu() {
+        document.querySelector('body').classList.toggle('open')
+      }
+    </script>
   </head>
   <body>
     <div class="site">
       <a href="#">CAFE SPACE</a>
     </div>
-    <!-- <nav class="menu">
+
+    <button type="button" onclick="toggleMenu()">
+      <span class="fa fa-bars"></span>
+      <span class="fa fa-close"></span>
+      <span class="sr-only">MENU</span>
+    </button>
+
+    <nav class="menu">
       <ul>
         <li><a href="#">ホーム</a></li>
         <li><a href="#">お知らせ</a></li>
         <li><a href="#">街角探訪</a></li>
+        <li><a href="#">おすすめグルメマップ</a></li>
+        <li><a href="#">フォトアルバム</a></li>
+        <li><a href="#">カテゴリー</a></li>
+        <li><a href="#">ギャラリー</a></li>
+        <li><a href="#">カタログ</a></li>
+        <li><a href="#">沿革</a></li>
+        <li><a href="#">事業紹介</a></li>
+        <li><a href="#">研究開発</a></li>
+        <li><a href="#">採用情報</a></li>
+        <li><a href="#">交通案内</a></li>
+        <li><a href="#">カレンダー</a></li>
         <li><a href="#">お問い合わせ</a></li>
       </ul>
-    </nav> -->
+    </nav>
+
+    <span class="page-cover" onclick="toggleMenu()"></span>
 
     <article class="kiji">
       <h1>
@@ -91,32 +116,10 @@
       </p>
     </article>
 
-    <!-- <aside class="kanren">
-      <ul>
-        <li>
-          <a href="#"
-            ><img src="./img/toast-300x200.jpg" alt="" />カフェで朝ごはん</a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><img
-              src="./img/coffee-300x200.jpg"
-              alt=""
-            />あたたかい飲み物で仕事の効率アップ</a
-          >
-        </li>
-        <li>
-          <a href="#"><img src="./img/town-300x200.jpg" alt="" />街角探訪</a>
-        </li>
-        <li>
-          <a href="#"><img src="./img/sand-300x200.jpg" alt="" />野菜と炭水化物</a>
-        </li>
-      </ul>
-    </aside> -->
-
     <div class="copyright">
       <p>Copyright &copy CAFE SPACE</p>
     </div>
+
+    <span class="redbar"></span>
   </body>
 </html>
