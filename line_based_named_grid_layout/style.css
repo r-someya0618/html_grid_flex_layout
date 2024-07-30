@@ -306,6 +306,22 @@ button {
     flex-direction: column;
   }
 
+  .pickup {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-row-gap: 10px;
+  }
+
+  .gaiyou a {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+  }
+
+  .gaiyou a span {
+    grid-row-end: span 2;
+  }
+
   .news {
     width: auto;
   }
